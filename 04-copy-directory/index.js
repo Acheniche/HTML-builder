@@ -3,7 +3,7 @@ const path = require("path");
 const promis = require('node:fs/promises');
 
 (async function(){
-await promis.rm(path.join(__dirname, "files-copy"), { recursive: true }, (err) => {});
+await promis.rm(path.join(__dirname, "files-copy"), { recursive: true, force: true }, (err) => {});
 await promis.mkdir(path.join(__dirname, "files-copy"), { recursive: true }, (err) => {});
 
 fs.readdir(
