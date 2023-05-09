@@ -9,7 +9,7 @@ data.forEach(file =>{
     if(file.isFile()){
         let name = file.name.split(".");
         fs.stat(path.join(__dirname, "secret-folder", file.name), (err,stats) =>{
-            console.log(name[0] + '   ' + name[1] + '   ' + stats.size + 'kB');
+            console.log(name[0] + '   ' + name[1] + '   ' + stats.size + 'B');
         } );
     }
 });
